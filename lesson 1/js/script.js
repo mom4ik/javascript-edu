@@ -2,16 +2,20 @@ var cost = prompt("Ваш бюджет?");
 var name = prompt("Название вашего магазина?");
 var shopGoods = [];
 var employee = {};
-shopGoods[0] = prompt("Какой тип товаров будем продавать?");
-shopGoods[1] = prompt("Какой тип товаров будем продавать?");
-shopGoods[2] = prompt("Какой тип товаров будем продавать?");
+
+for(var i = 0; i < 5; i++) {
+    shopGoods[i] = prompt("Какой тип товаров будем продавать?");
+}
+
+//console.log(shopGoods);
 
 var mainList = {};
 mainList = {
     c: cost,
     n: name,
     s: shopGoods,
-    e: employee
+    e: employee,
+    open: false
 }
 
 alert(mainList.c + mainList.n + mainList.s + mainList.e);
